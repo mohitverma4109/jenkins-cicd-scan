@@ -3,17 +3,22 @@
 This guide explains how to integrate Trend Micro Artifact Scanner (TMAS) into a Jenkins pipeline to automatically scan Docker images for vulnerabilities before pushing them to AWS ECR.
 
 🪜 Step 1 – Install Docker and Jenkins on Your Server
+
 1️⃣ Update your system
+
 sudo apt update -y && sudo apt upgrade -y
 
 2️⃣ Install Docker
+
 sudo apt install docker.io -y
 
 3️⃣ Enable and start Docker service
+
 sudo systemctl enable docker
 sudo systemctl start docker
 
 4️⃣ Install Jenkins (on Ubuntu)
+
 curl -fsSL https://pkg.jenkins.io/debian/jenkins.io.key | sudo tee \
     /usr/share/keyrings/jenkins-keyring.asc > /dev/null
 
@@ -26,6 +31,7 @@ sudo apt install openjdk-17-jdk -y
 sudo apt install jenkins -y
 
 5️⃣ Add Jenkins user to Docker group
+
 sudo usermod -aG docker jenkins
 sudo systemctl restart jenkins
 
