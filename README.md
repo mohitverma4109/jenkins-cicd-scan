@@ -30,7 +30,9 @@ sudo usermod -aG docker jenkins
 sudo systemctl restart jenkins
 
 ⚙️ Step 2 – Install TMAS CLI and AWS CLI
+
 1️⃣ Install TMAS CLI
+
 wget https://cli.artifactscan.cloudone.trendmicro.com/tmas-cli/latest/tmas-cli_Linux_x86_64.tar.gz
 tar -xvf tmas-cli_Linux_x86_64.tar.gz
 chmod +x tmas
@@ -42,6 +44,7 @@ sudo mv tmas /usr/local/bin/
 tmas version
 
 2️⃣ Install AWS CLI v2
+
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
